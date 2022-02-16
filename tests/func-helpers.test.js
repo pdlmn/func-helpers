@@ -1,20 +1,20 @@
-import { hasTruthyValues, replaceAt, replaceEveryNth, map, pipe, curry, decrement, decrementEach, increment, incrementEach, repeat, find, findIndex, forEach, hasFalsyValues, flatten, filter, objEqual, objectInArray, remove, all, any, modify, removeDuplicateObj } from '../src/utils/func_helpers'
+import { hasTruthy, replaceAt, replaceEveryNth, map, pipe, curry, decrement, decrementEach, increment, incrementEach, repeat, find, findIndex, forEach, hasFalsy, flatten, filter, objEqual, objectInArray, remove, all, any, modify, removeDuplicateObj } from '../dist/main.js'
 
 describe('func helpers work properly', () => {
-  test('hasTruthyValues correctly determines truthiness of values in an array (1)', () => {
-    expect(hasTruthyValues([1, 2, 3])).toBe(true)
+  test('hasTruthy correctly determines truthiness of values in an array (1)', () => {
+    expect(hasTruthy([1, 2, 3])).toBe(true)
   })
 
-  test('hasTruthyValues correctly determines truthiness of values in an array (2)', () => {
-    expect(hasTruthyValues([null, undefined, 0])).toBe(false)
+  test('hasTruthy correctly determines truthiness of values in an array (2)', () => {
+    expect(hasTruthy([null, undefined, 0])).toBe(false)
   })
 
-  test('hasFalsyValues correctly determines truthiness of values in an array (1)', () => {
-    expect(hasFalsyValues([1, 2, 3])).toBe(false)
+  test('hasFalsy correctly determines truthiness of values in an array (1)', () => {
+    expect(hasFalsy([1, 2, 3])).toBe(false)
   })
 
-  test('hasFalsyValues correctly determines truthiness of values in an array (2)', () => {
-    expect(hasFalsyValues([1, 2, null])).toBe(true)
+  test('hasFalsy correctly determines truthiness of values in an array (2)', () => {
+    expect(hasFalsy([1, 2, null])).toBe(true)
   })
 
   test('replaceEveryNth replaces values correctly (1)', () => {
