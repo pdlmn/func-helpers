@@ -186,6 +186,12 @@ const remove = curry((item, arr) => {
   return result
 });
 
+const gt = curry((a, b) => a > b);
+const lt = curry((a, b) => a < b);
+const gte = curry((a, b) => a >= b);
+const lte = curry((a, b) => a <= b);
+const eq = curry((a, b) => a === b);
+
 const all = curry((pred, arr) => {
   const len = arr.length;
   for (let i = 0; i < len; i++) {
@@ -213,4 +219,4 @@ const modify = curry((prop, fn, obj) =>
     { [prop]: fn(obj[prop]) }
   ));
 
-export { all, any, curry, decrement, decrementEach, filter, find, findIndex, flatten, forEach, hasFalsy, hasTruthy, increment, incrementEach, map, modify, objEqual, objectInArray, pipe, remove, removeDuplicateObj, repeat, replaceAt, replaceEveryNth };
+export { all, any, curry, decrement, decrementEach, eq, filter, find, findIndex, flatten, forEach, gt, gte, hasFalsy, hasTruthy, increment, incrementEach, isArray, isObject, lt, lte, map, modify, objEqual, objectInArray, pipe, remove, removeDuplicateObj, repeat, replaceAt, replaceEveryNth };
