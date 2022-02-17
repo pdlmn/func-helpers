@@ -1,5 +1,6 @@
 {
   "name": "@pdlmn/func-helpers",
+  "description": "A set of simple pure functions",
   "version": "1.0.13",
   "main": "dist/main.js",
   "type": "module",
